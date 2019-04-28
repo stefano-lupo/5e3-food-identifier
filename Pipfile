@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 numpy = "*"
 opencv-python = "==3.4.5.20"
+yolo34py = "*"
 
 [requires]
 python_version = "3.6"
