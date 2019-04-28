@@ -3,18 +3,35 @@
 BBox: [bounding box left X] [bounding box top Y] [bounding box right X] [bounding box bottom Y] [Label]
 DN: [Label] [object center in X] [object center in Y] [object width in X] [object width in Y]
 """
+INGREDIENT_IDS = {
+    "Fork": 0,
+    "Knife": 1,
+    "Spoon": 2,
+    "Glass": 3,
+    "Rice": 4,
+    "Chicken": 5
+}
+
+IMG_WIDTH = 1008
+IMG_HEIGHT = 756
 
 class DarknetObject:
-    def __init__(self, bBoxLine: str):
+    def __init__(self, bBoxLine: str, normalize: bool=False):
         bBoxPieces = bBoxLine.split(" ")
-        label = bBoxPieces[4]
+        self.label = INGREDIENT_IDS[bBoxPieces[4]]
         x1, y1, x2, y2 = [int(i) for i in bBoxPieces[:4]]
         
         width = x2 - x1
         height = y2 - y1
-        x = x1 + width / 2
-        y = y1 + height / 2
+        x = round(x1 + width / 2)
+        y = round(y1 + height / 2)
+
+        if normalize:
+            width = width / IMG_WIDTH
+            height = height / IMG_HEIGHT
+            x = x / IMG_WIDTH
+            y = y / IMG_HEIGHT
     
-        dnPieces = [str(i) for i in [label, x, y, width, height]]
+        dnPieces = [str(i) for i in [self.label, x, y, width, height]]
         self.dnLine = " ".join(dnPieces)
         

@@ -1,0 +1,7 @@
+./training-files/dataset/eval/001-26.jpg
+./training-files/dataset/eval/001-3.jpg
+./training-files/dataset/eval/001-19.jpg
+./training-files/dataset/eval/001-29.jpg
+./training-files/dataset/eval/001-11.jpg
+./training-files/dataset/eval/001-9.jpg
+./training-files/dataset/eval/001-12.jpg

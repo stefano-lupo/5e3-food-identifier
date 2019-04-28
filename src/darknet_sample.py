@@ -6,14 +6,14 @@ from sample_name import SampleName
 
 class DarknetSample:
 
-    def __init__(self, imageDir: str, labelDir: str, sampleName: SampleName):
+    def __init__(self, imageDir: str, labelDir: str, sampleName: SampleName, normalize: bool = True):
         self.sampleName = sampleName
         self.imageDir = imageDir
         self.labelDir = labelDir
         with open(os.path.join(labelDir, sampleName.getFilename("txt"))) as f:
             # first line is junk in BBox Multiclass
             bBoxLines = [line.strip("\n") for line in f.readlines()[1:]]
-            self.objects: List[DarknetObject] = [DarknetObject(line) for line in bBoxLines]
+            self.objects: List[DarknetObject] = [DarknetObject(line, normalize) for line in bBoxLines]
 
     def getLines(self) -> str:
         return "\n".join([obj.dnLine for obj in self.objects])

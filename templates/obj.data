@@ -1,0 +1,5 @@
+classes = {numClasses}
+train = {trainTxt}
+valid = {evalFile}
+names = {namesFile}
+backup = {backupDir}

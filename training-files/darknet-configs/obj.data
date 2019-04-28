@@ -1,0 +1,5 @@
+classes = 6
+train = ./training-files/darknet-configs/train.txt
+valid = ./training-files/darknet-configs/eval.txt
+names = ./training-files/darknet-configs/obj.names
+backup = ./training-files/darknet-configs/backup

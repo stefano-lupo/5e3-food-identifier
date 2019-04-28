@@ -1,7 +1,9 @@
 import os
-from typing import List, Dict
+import sys
+from typing import List, Dict, Set
 import random
 import shutil
+import glob
 
 import numpy as np
 
@@ -12,23 +14,39 @@ from sample_name import SampleName
 random.seed(1)
 np.random.seed(1)
 
-LABELS_DIR = "../labels"
-DATASET_DIR = "../dataset"
-IMAGES_DIR = "../images"
-EVAL_DIR = os.path.join(DATASET_DIR, "eval")
+
+LABELS_DIR = "./labels"
+IMAGES_DIR = "./images"
+DARKNET_TEMPLATES_DIR = "./templates"
+DARKNET_DATA_FILE_TEMPLATE = os.path.join(DARKNET_TEMPLATES_DIR, "obj.data")
+
+TRAINING_FILES_DIR = "./training-files"
+DARKNET_CONFIG_DIR = os.path.join(TRAINING_FILES_DIR, "darknet-configs")
+DARKNET_BACKUP_DIR = os.path.join(DARKNET_CONFIG_DIR, "backup")
+
+DATASET_DIR = os.path.join(TRAINING_FILES_DIR, "dataset")
 TRAIN_DIR = os.path.join(DATASET_DIR, "train")
+EVAL_DIR = os.path.join(DATASET_DIR, "eval")
+
+TRAIN_FILE = os.path.join(DARKNET_CONFIG_DIR, "train.txt")
+EVAL_FILE = os.path.join(DARKNET_CONFIG_DIR, "eval.txt")
+
+DARKNET_NAMES_FILE = os.path.join(DARKNET_CONFIG_DIR, "obj.names")
+DARKNET_DATA_FILE = os.path.join(DARKNET_CONFIG_DIR, "obj.data")
+
+
 
 # Basic eval split for now, cross val later
 EVALUATION_SPLIT = 0.2
 
-def generateSamples(menuItemDirs: List[str]) -> List[DarknetSample]:
+def generateSamples(menuItemDirs: List[str], normalize=False) -> List[DarknetSample]:
     darknetSamples: List[DarknetSample] = []
     for menuItemDir in menuItemDirs:
         menuItemDir = os.path.join(LABELS_DIR, menuItemDir)
         for labelsFile in os.listdir(menuItemDir):
             print(labelsFile)
             sampleName: SampleName = SampleName.fromFilename(labelsFile)
-            darknetSamples.append(DarknetSample(IMAGES_DIR, LABELS_DIR, sampleName))
+            darknetSamples.append(DarknetSample(IMAGES_DIR, LABELS_DIR, sampleName, normalize))
     return darknetSamples
 
 def moveAll(files: List[str], destDir: str):
@@ -39,21 +57,48 @@ def splitDataset(samples: List[DarknetSample]) -> (List[DarknetSample], List[Dar
     np.random.shuffle(samples)
     numEval = round(len(samples) * EVALUATION_SPLIT)
 
-    return ( samples[numEval:], samples[:numEval])
+    return (samples[numEval:], samples[:numEval])
 
 
-def writeDataset(samples: List[DarknetSample], dir: str):
-    for sample in samples:
-         with open(os.path.join(dir, sample.g), 'w') as f:
-                f.writelines(darknetSample.getLines())
+def writeDatasetTxtFiles():
+    with open(TRAIN_FILE, 'w') as f:
+        trainFiles: List[str] = [trainFile for trainFile in glob.glob("%s/*.jpg" % TRAIN_DIR)]
+        f.write("\n".join(trainFiles))
+
+    with open(EVAL_FILE, 'w') as f:
+        evalFiles: List[str] = [evalFile for evalFile in glob.glob("%s/*.jpg" % EVAL_DIR)]
+        f.write("\n".join(evalFiles))
+
+def generateYoloConfig(darknetSamples: List[DarknetSample]):
+    classes: Set[int] = set()
+    for sample in darknetSamples:
+        objects: List[int] = [obj.label for obj in sample.objects]
+        classes.update(objects)
+    with open(DARKNET_NAMES_FILE, 'w') as f:
+        f.write("\n".join([str(c) for c in classes]))
+    with open(DARKNET_DATA_FILE_TEMPLATE, 'r') as f:
+        template: str = "".join(f.readlines())
+        dataFileContents: str = template.format(
+            numClasses=len(classes), 
+            trainTxt=TRAIN_FILE, 
+            evalFile=EVAL_FILE, 
+            namesFile=DARKNET_NAMES_FILE,
+            backupDir=DARKNET_BACKUP_DIR)
+        with open(DARKNET_DATA_FILE, 'w') as f2:
+            f2.write(dataFileContents)
+        
 
 
 if __name__ == "__main__":
     
+    normalize = True
+    if len(sys.argv) > 1:
+        normalize = sys.argv[1]
+
     menuItemDirs: List[str] = os.listdir(LABELS_DIR)
     print("Using menu items: %s" % menuItemDirs)
 
-    darknetSamples: List[DarknetSample] = generateSamples(menuItemDirs)
+    darknetSamples: List[DarknetSample] = generateSamples(menuItemDirs, normalize)
     trainSamples, evalSamples = splitDataset(darknetSamples)
 
     # Clean old data directory whether it exists or not
@@ -62,8 +107,13 @@ if __name__ == "__main__":
     os.mkdir(TRAIN_DIR)
     os.mkdir(EVAL_DIR)
 
+    
     for sample in trainSamples:
         sample.writeSample(TRAIN_DIR)
 
     for sample in evalSamples:
         sample.writeSample(EVAL_DIR)
+    
+    writeDatasetTxtFiles()
+    generateYoloConfig(darknetSamples)
+    
