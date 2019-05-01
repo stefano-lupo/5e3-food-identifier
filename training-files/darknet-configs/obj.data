@@ -1,4 +1,4 @@
-classes = 6
+classes = 19
 train = ./training-files/darknet-configs/train.txt
 valid = ./training-files/darknet-configs/eval.txt
 names = ./training-files/darknet-configs/obj.names

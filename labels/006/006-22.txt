@@ -1,0 +1,19 @@
+18
+48 517 294 718 Glass
+373 163 808 245 Fork
+571 396 906 538 Knife
+406 437 562 524 Chicken
+453 360 591 444 Chicken
+328 246 532 280 White Pasta
+503 267 563 318 White Pasta
+542 215 613 258 White Pasta
+491 516 526 604 White Pasta
+453 247 492 324 White Pasta
+333 239 374 322 White Pasta
+662 296 701 328 Sweetcorn
+636 302 670 336 Sweetcorn
+581 332 609 358 Sweetcorn
+617 320 642 346 Sweetcorn
+597 349 622 371 Sweetcorn
+377 283 399 304 Sweetcorn
+488 281 509 305 Sweetcorn

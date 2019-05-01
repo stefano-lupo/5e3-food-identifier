@@ -1,6 +1,7 @@
 import os
 import sys
 from typing import List, Dict, Set
+from collections import defaultdict
 import random
 import shutil
 import glob
@@ -11,8 +12,8 @@ from darknet_sample import DarknetSample
 from sample_name import SampleName
 
 # Fix seed to reproduce training / eval sets
-random.seed(1)
-np.random.seed(1)
+random.seed(10)
+np.random.seed(10)
 
 
 LABELS_DIR = "./labels"
@@ -37,7 +38,7 @@ DARKNET_DATA_FILE = os.path.join(DARKNET_CONFIG_DIR, "obj.data")
 
 
 # Basic eval split for now, cross val later
-EVALUATION_SPLIT = 0.2
+EVALUATION_SPLIT = 0.1
 
 def generateSamples(menuItemDirs: List[str], normalize=False) -> List[DarknetSample]:
     darknetSamples: List[DarknetSample] = []
@@ -54,10 +55,24 @@ def moveAll(files: List[str], destDir: str):
         shutil.move(fileName, destDir)
 
 def splitDataset(samples: List[DarknetSample]) -> (List[DarknetSample], List[DarknetSample]):
-    np.random.shuffle(samples)
-    numEval = round(len(samples) * EVALUATION_SPLIT)
+    # np.random.shuffle(samples)
 
-    return (samples[numEval:], samples[:numEval])
+    samplesByDish: Dict[str, List[DarknetSample]] = defaultdict(list)
+    for sample in samples:
+        samplesByDish[sample.sampleName.menuItemId].append(sample)
+
+    numClasses: int = len(samplesByDish.keys())
+    numEvalPerClass: int = round((len(samples) * EVALUATION_SPLIT) / numClasses)
+
+    evalSamples: Set[DarknetSample] = set()
+    for id, samplesForId in samplesByDish.items():
+        np.random.shuffle(samplesForId)
+        evalSamples.update(samplesForId[:numEvalPerClass])
+
+    trainSamples: Set[DarknetSample] = set(samples) - evalSamples
+
+    return trainSamples, evalSamples
+    # return (samples[numEval:], samples[:numEval])
 
 
 def writeDatasetTxtFiles():
@@ -86,7 +101,6 @@ def generateYoloConfig(darknetSamples: List[DarknetSample]):
             backupDir=DARKNET_BACKUP_DIR)
         with open(DARKNET_DATA_FILE, 'w') as f2:
             f2.write(dataFileContents)
-        
 
 
 if __name__ == "__main__":
