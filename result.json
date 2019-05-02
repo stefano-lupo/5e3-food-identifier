@@ -1,0 +1,328 @@
+[
+{
+ "frame_id":1, 
+ "filename":"./training-files/dataset/eval/001-34.jpg", 
+ "objects": [ 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.749932, "center_y":0.217105, "width":0.217186, "height":0.286756}, "confidence":0.752431}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.300726, "center_y":0.409908, "width":0.182032, "height":0.301179}, "confidence":0.771484}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.705917, "center_y":0.587869, "width":0.368276, "height":0.293627}, "confidence":0.998107}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.290907, "center_y":0.750125, "width":0.353476, "height":0.224363}, "confidence":0.829417}
+ ] 
+}, 
+{
+ "frame_id":2, 
+ "filename":"./training-files/dataset/eval/002-21.jpg", 
+ "objects": [ 
+  {"class_id":8, "name":"8", "relative_coordinates":{"center_x":0.633711, "center_y":0.675078, "width":0.044871, "height":0.072455}, "confidence":0.403258}, 
+  {"class_id":8, "name":"8", "relative_coordinates":{"center_x":0.558407, "center_y":0.557810, "width":0.052527, "height":0.058916}, "confidence":0.286625}, 
+  {"class_id":7, "name":"7", "relative_coordinates":{"center_x":0.597959, "center_y":0.631355, "width":0.047128, "height":0.073974}, "confidence":0.413374}, 
+  {"class_id":7, "name":"7", "relative_coordinates":{"center_x":0.632559, "center_y":0.560191, "width":0.043163, "height":0.055567}, "confidence":0.278641}, 
+  {"class_id":6, "name":"6", "relative_coordinates":{"center_x":0.480757, "center_y":0.521490, "width":0.143753, "height":0.229573}, "confidence":0.798138}
+ ] 
+}, 
+{
+ "frame_id":3, 
+ "filename":"./training-files/dataset/eval/006-35.jpg", 
+ "objects": [ 
+  {"class_id":17, "name":"17", "relative_coordinates":{"center_x":0.406303, "center_y":0.361721, "width":0.052323, "height":0.156692}, "confidence":0.356955}, 
+  {"class_id":5, "name":"5", "relative_coordinates":{"center_x":0.510012, "center_y":0.566387, "width":0.150174, "height":0.093918}, "confidence":0.526667}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.187280, "center_y":0.186684, "width":0.243208, "height":0.305846}, "confidence":0.942475}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.715549, "center_y":0.398458, "width":0.365276, "height":0.340073}, "confidence":0.979025}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.604491, "center_y":0.253390, "width":0.474929, "height":0.107941}, "confidence":0.696013}
+ ] 
+}, 
+{
+ "frame_id":4, 
+ "filename":"./training-files/dataset/eval/007-10.jpg", 
+ "objects": [ 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.733841, "center_y":0.561800, "width":0.349742, "height":0.339658}, "confidence":0.373562}
+ ] 
+}, 
+{
+ "frame_id":5, 
+ "filename":"./training-files/dataset/eval/002-29.jpg", 
+ "objects": [ 
+  {"class_id":6, "name":"6", "relative_coordinates":{"center_x":0.412406, "center_y":0.451257, "width":0.054861, "height":0.146401}, "confidence":0.707627}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.170733, "center_y":0.829349, "width":0.254895, "height":0.275771}, "confidence":0.638903}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.727398, "center_y":0.424087, "width":0.543181, "height":0.147681}, "confidence":0.942079}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.237692, "center_y":0.468846, "width":0.307495, "height":0.479463}, "confidence":0.979579}
+ ] 
+}, 
+{
+ "frame_id":6, 
+ "filename":"./training-files/dataset/eval/006-9.jpg", 
+ "objects": [ 
+  {"class_id":5, "name":"5", "relative_coordinates":{"center_x":0.519031, "center_y":0.630609, "width":0.128241, "height":0.127541}, "confidence":0.687551}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.682456, "center_y":0.582209, "width":0.292666, "height":0.145321}, "confidence":0.726848}
+ ] 
+}, 
+{
+ "frame_id":7, 
+ "filename":"./training-files/dataset/eval/003-3.jpg", 
+ "objects": [ 
+  {"class_id":10, "name":"10", "relative_coordinates":{"center_x":0.486825, "center_y":0.586641, "width":0.072643, "height":0.102749}, "confidence":0.334169}, 
+  {"class_id":9, "name":"9", "relative_coordinates":{"center_x":0.400506, "center_y":0.592769, "width":0.088681, "height":0.109442}, "confidence":0.540811}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.812543, "center_y":0.167233, "width":0.255331, "height":0.290420}, "confidence":0.552613}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.599741, "center_y":0.437256, "width":0.352420, "height":0.173291}, "confidence":0.991553}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.591168, "center_y":0.708233, "width":0.043166, "height":0.403216}, "confidence":0.375743}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.282787, "center_y":0.543769, "width":0.497478, "height":0.174054}, "confidence":0.879999}
+ ] 
+}, 
+{
+ "frame_id":8, 
+ "filename":"./training-files/dataset/eval/004-23.jpg", 
+ "objects": [ 
+  {"class_id":11, "name":"11", "relative_coordinates":{"center_x":0.699326, "center_y":0.492199, "width":0.204868, "height":0.161998}, "confidence":0.419363}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.319762, "center_y":0.434929, "width":0.160075, "height":0.181923}, "confidence":0.922503}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.661186, "center_y":0.756506, "width":0.205371, "height":0.269448}, "confidence":0.627097}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.437996, "center_y":0.747155, "width":0.219371, "height":0.326726}, "confidence":0.973227}
+ ] 
+}, 
+{
+ "frame_id":9, 
+ "filename":"./training-files/dataset/eval/004-13.jpg", 
+ "objects": [ 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.259752, "center_y":0.208483, "width":0.210177, "height":0.155280}, "confidence":0.501385}
+ ] 
+}, 
+{
+ "frame_id":10, 
+ "filename":"./training-files/dataset/eval/004-25.jpg", 
+ "objects": [ 
+  {"class_id":11, "name":"11", "relative_coordinates":{"center_x":0.761634, "center_y":0.312563, "width":0.173972, "height":0.218632}, "confidence":0.956320}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.722611, "center_y":0.599510, "width":0.173378, "height":0.201968}, "confidence":0.981810}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.546074, "center_y":0.522648, "width":0.196205, "height":0.260076}, "confidence":0.879987}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.419615, "center_y":0.712779, "width":0.366638, "height":0.167263}, "confidence":0.989384}
+ ] 
+}, 
+{
+ "frame_id":11, 
+ "filename":"./training-files/dataset/eval/002-43.jpg", 
+ "objects": [ 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.197094, "center_y":0.840613, "width":0.267911, "height":0.278477}, "confidence":0.453819}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.708336, "center_y":0.376559, "width":0.512518, "height":0.118030}, "confidence":0.682584}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.239452, "center_y":0.475750, "width":0.356423, "height":0.427694}, "confidence":0.983714}
+ ] 
+}, 
+{
+ "frame_id":12, 
+ "filename":"./training-files/dataset/eval/007-25.jpg", 
+ "objects": [ 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.596066, "center_y":0.672131, "width":0.331291, "height":0.294201}, "confidence":0.283302}
+ ] 
+}, 
+{
+ "frame_id":13, 
+ "filename":"./training-files/dataset/eval/007-13.jpg", 
+ "objects": [ 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.173059, "center_y":0.141847, "width":0.300376, "height":0.256481}, "confidence":0.994777}
+ ] 
+}, 
+{
+ "frame_id":14, 
+ "filename":"./training-files/dataset/eval/001-22.jpg", 
+ "objects": [ 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.809194, "center_y":0.185216, "width":0.241506, "height":0.290845}, "confidence":0.843419}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.257176, "center_y":0.644407, "width":0.281850, "height":0.301398}, "confidence":0.650341}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.756707, "center_y":0.485711, "width":0.488124, "height":0.191347}, "confidence":0.829959}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.296149, "center_y":0.813794, "width":0.371346, "height":0.296002}, "confidence":0.774493}
+ ] 
+}, 
+{
+ "frame_id":15, 
+ "filename":"./training-files/dataset/eval/006-22.jpg", 
+ "objects": [ 
+  {"class_id":18, "name":"18", "relative_coordinates":{"center_x":0.677085, "center_y":0.406268, "width":0.034334, "height":0.040297}, "confidence":0.861023}, 
+  {"class_id":18, "name":"18", "relative_coordinates":{"center_x":0.707431, "center_y":0.394583, "width":0.027833, "height":0.041797}, "confidence":0.363793}, 
+  {"class_id":17, "name":"17", "relative_coordinates":{"center_x":0.595968, "center_y":0.292751, "width":0.099115, "height":0.063432}, "confidence":0.354812}, 
+  {"class_id":17, "name":"17", "relative_coordinates":{"center_x":0.440953, "center_y":0.328861, "width":0.122510, "height":0.062674}, "confidence":0.257127}, 
+  {"class_id":5, "name":"5", "relative_coordinates":{"center_x":0.565207, "center_y":0.581935, "width":0.160485, "height":0.108046}, "confidence":0.696426}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.212428, "center_y":0.826772, "width":0.266736, "height":0.285290}, "confidence":0.889941}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.745878, "center_y":0.576338, "width":0.346449, "height":0.180359}, "confidence":0.593395}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.606588, "center_y":0.269967, "width":0.508282, "height":0.095443}, "confidence":0.653191}
+ ] 
+}, 
+{
+ "frame_id":16, 
+ "filename":"./training-files/dataset/eval/005-32.jpg", 
+ "objects": [ 
+  {"class_id":16, "name":"16", "relative_coordinates":{"center_x":0.406959, "center_y":0.631462, "width":0.038792, "height":0.040437}, "confidence":0.347671}, 
+  {"class_id":15, "name":"15", "relative_coordinates":{"center_x":0.359925, "center_y":0.632714, "width":0.134298, "height":0.111437}, "confidence":0.358951}, 
+  {"class_id":15, "name":"15", "relative_coordinates":{"center_x":0.331415, "center_y":0.675793, "width":0.133057, "height":0.112119}, "confidence":0.257912}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.557353, "center_y":0.519522, "width":0.105824, "height":0.165217}, "confidence":0.416883}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.523179, "center_y":0.593246, "width":0.027048, "height":0.018911}, "confidence":0.372393}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.638126, "center_y":0.364783, "width":0.078173, "height":0.106023}, "confidence":0.362355}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.667276, "center_y":0.475539, "width":0.051032, "height":0.053976}, "confidence":0.326692}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.704790, "center_y":0.590854, "width":0.049131, "height":0.055941}, "confidence":0.277994}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.677684, "center_y":0.590941, "width":0.039109, "height":0.066851}, "confidence":0.273809}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.554784, "center_y":0.637210, "width":0.076848, "height":0.126684}, "confidence":0.265003}, 
+  {"class_id":13, "name":"13", "relative_coordinates":{"center_x":0.634166, "center_y":0.599184, "width":0.035759, "height":0.026307}, "confidence":0.720543}, 
+  {"class_id":13, "name":"13", "relative_coordinates":{"center_x":0.667436, "center_y":0.397065, "width":0.126222, "height":0.107837}, "confidence":0.288196}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.748927, "center_y":0.130240, "width":0.208344, "height":0.234101}, "confidence":0.934652}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.358713, "center_y":0.561317, "width":0.115706, "height":0.342198}, "confidence":0.913276}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.773916, "center_y":0.555997, "width":0.365053, "height":0.215873}, "confidence":0.965232}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.887025, "center_y":0.403481, "width":0.160339, "height":0.409656}, "confidence":0.983901}
+ ] 
+}, 
+{
+ "frame_id":17, 
+ "filename":"./training-files/dataset/eval/005-27.jpg", 
+ "objects": [ 
+  {"class_id":16, "name":"16", "relative_coordinates":{"center_x":0.367202, "center_y":0.402361, "width":0.028344, "height":0.045821}, "confidence":0.635965}, 
+  {"class_id":16, "name":"16", "relative_coordinates":{"center_x":0.291168, "center_y":0.396362, "width":0.079060, "height":0.053100}, "confidence":0.445633}, 
+  {"class_id":15, "name":"15", "relative_coordinates":{"center_x":0.327432, "center_y":0.360258, "width":0.131443, "height":0.099441}, "confidence":0.268267}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.437979, "center_y":0.401562, "width":0.035973, "height":0.026242}, "confidence":0.724482}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.666367, "center_y":0.632146, "width":0.080114, "height":0.111220}, "confidence":0.387375}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.591175, "center_y":0.629924, "width":0.052469, "height":0.072085}, "confidence":0.386451}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.486423, "center_y":0.560027, "width":0.075531, "height":0.062661}, "confidence":0.313238}, 
+  {"class_id":13, "name":"13", "relative_coordinates":{"center_x":0.452863, "center_y":0.481543, "width":0.146624, "height":0.223626}, "confidence":0.583614}, 
+  {"class_id":13, "name":"13", "relative_coordinates":{"center_x":0.552562, "center_y":0.560056, "width":0.092152, "height":0.137836}, "confidence":0.385042}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.733242, "center_y":0.183362, "width":0.187753, "height":0.263914}, "confidence":0.497632}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.500238, "center_y":0.561586, "width":0.238067, "height":0.350183}, "confidence":0.821970}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.749671, "center_y":0.583954, "width":0.269042, "height":0.392372}, "confidence":0.977785}
+ ] 
+}, 
+{
+ "frame_id":18, 
+ "filename":"./training-files/dataset/eval/007-11.jpg", 
+ "objects": [ 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.266665, "center_y":0.192358, "width":0.259732, "height":0.295931}, "confidence":0.977549}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.632113, "center_y":0.744982, "width":0.305936, "height":0.254547}, "confidence":0.997666}
+ ] 
+}, 
+{
+ "frame_id":19, 
+ "filename":"./training-files/dataset/eval/006-10.jpg", 
+ "objects": [ 
+  {"class_id":18, "name":"18", "relative_coordinates":{"center_x":0.681393, "center_y":0.413444, "width":0.028979, "height":0.037809}, "confidence":0.861482}, 
+  {"class_id":18, "name":"18", "relative_coordinates":{"center_x":0.710297, "center_y":0.403370, "width":0.025249, "height":0.041169}, "confidence":0.541807}, 
+  {"class_id":18, "name":"18", "relative_coordinates":{"center_x":0.666099, "center_y":0.430721, "width":0.030640, "height":0.041956}, "confidence":0.271181}, 
+  {"class_id":5, "name":"5", "relative_coordinates":{"center_x":0.579965, "center_y":0.589181, "width":0.153099, "height":0.114064}, "confidence":0.473717}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.221601, "center_y":0.818403, "width":0.222269, "height":0.267286}, "confidence":0.816743}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.738560, "center_y":0.583136, "width":0.336282, "height":0.167918}, "confidence":0.658258}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.628104, "center_y":0.297089, "width":0.475393, "height":0.095211}, "confidence":0.959468}
+ ] 
+}, 
+{
+ "frame_id":20, 
+ "filename":"./training-files/dataset/eval/001-29.jpg", 
+ "objects": [ 
+  {"class_id":5, "name":"5", "relative_coordinates":{"center_x":0.442914, "center_y":0.522563, "width":0.070288, "height":0.101750}, "confidence":0.522639}, 
+  {"class_id":5, "name":"5", "relative_coordinates":{"center_x":0.439846, "center_y":0.402277, "width":0.071884, "height":0.110746}, "confidence":0.314030}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.817459, "center_y":0.148184, "width":0.259922, "height":0.254548}, "confidence":0.870630}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.288911, "center_y":0.346019, "width":0.158326, "height":0.378040}, "confidence":0.895182}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.746408, "center_y":0.531677, "width":0.370666, "height":0.347755}, "confidence":0.997772}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.295603, "center_y":0.710486, "width":0.399564, "height":0.248287}, "confidence":0.967516}
+ ] 
+}, 
+{
+ "frame_id":21, 
+ "filename":"./training-files/dataset/eval/003-36.jpg", 
+ "objects": [ 
+  {"class_id":10, "name":"10", "relative_coordinates":{"center_x":0.443329, "center_y":0.597175, "width":0.057713, "height":0.083467}, "confidence":0.429105}, 
+  {"class_id":9, "name":"9", "relative_coordinates":{"center_x":0.480941, "center_y":0.636652, "width":0.092175, "height":0.125829}, "confidence":0.541424}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.785197, "center_y":0.674388, "width":0.216736, "height":0.213685}, "confidence":0.499096}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.580456, "center_y":0.506936, "width":0.383601, "height":0.215137}, "confidence":0.562529}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.736955, "center_y":0.481150, "width":0.297167, "height":0.462109}, "confidence":0.998278}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.238896, "center_y":0.588870, "width":0.418842, "height":0.321150}, "confidence":0.882779}
+ ] 
+}, 
+{
+ "frame_id":22, 
+ "filename":"./training-files/dataset/eval/005-5.jpg", 
+ "objects": [ 
+  {"class_id":15, "name":"15", "relative_coordinates":{"center_x":0.787421, "center_y":0.324481, "width":0.055956, "height":0.181433}, "confidence":0.621895}, 
+  {"class_id":15, "name":"15", "relative_coordinates":{"center_x":0.563346, "center_y":0.444381, "width":0.079602, "height":0.044622}, "confidence":0.381724}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.482264, "center_y":0.633177, "width":0.049948, "height":0.054253}, "confidence":0.523773}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.364439, "center_y":0.674282, "width":0.035273, "height":0.029183}, "confidence":0.467991}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.558473, "center_y":0.626607, "width":0.075712, "height":0.162695}, "confidence":0.396347}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.475499, "center_y":0.560789, "width":0.032574, "height":0.032635}, "confidence":0.389889}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.442903, "center_y":0.413969, "width":0.027833, "height":0.041782}, "confidence":0.377621}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.515163, "center_y":0.516194, "width":0.041459, "height":0.070518}, "confidence":0.342818}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.297561, "center_y":0.557510, "width":0.034667, "height":0.034228}, "confidence":0.331805}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.325795, "center_y":0.483786, "width":0.101089, "height":0.121638}, "confidence":0.310198}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.558657, "center_y":0.746487, "width":0.030110, "height":0.089024}, "confidence":0.276206}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.341156, "center_y":0.670396, "width":0.029465, "height":0.033788}, "confidence":0.275051}, 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.478537, "center_y":0.668089, "width":0.040567, "height":0.078803}, "confidence":0.268398}, 
+  {"class_id":13, "name":"13", "relative_coordinates":{"center_x":0.518451, "center_y":0.634028, "width":0.078507, "height":0.303029}, "confidence":0.700707}, 
+  {"class_id":13, "name":"13", "relative_coordinates":{"center_x":0.439045, "center_y":0.713396, "width":0.027057, "height":0.107330}, "confidence":0.296587}, 
+  {"class_id":13, "name":"13", "relative_coordinates":{"center_x":0.346746, "center_y":0.552153, "width":0.115650, "height":0.300371}, "confidence":0.269511}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.224655, "center_y":0.249849, "width":0.190663, "height":0.254486}, "confidence":0.516181}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.356808, "center_y":0.521274, "width":0.075196, "height":0.456903}, "confidence":0.337853}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.360742, "center_y":0.557296, "width":0.098158, "height":0.182589}, "confidence":0.287547}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.430581, "center_y":0.580800, "width":0.095323, "height":0.478819}, "confidence":0.707700}
+ ] 
+}, 
+{
+ "frame_id":23, 
+ "filename":"./training-files/dataset/eval/005-1.jpg", 
+ "objects": [ 
+  {"class_id":14, "name":"14", "relative_coordinates":{"center_x":0.595307, "center_y":0.630779, "width":0.042366, "height":0.030483}, "confidence":0.353653}, 
+  {"class_id":13, "name":"13", "relative_coordinates":{"center_x":0.476888, "center_y":0.554122, "width":0.077834, "height":0.044102}, "confidence":0.371020}, 
+  {"class_id":13, "name":"13", "relative_coordinates":{"center_x":0.594246, "center_y":0.727542, "width":0.166086, "height":0.165658}, "confidence":0.270342}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.788003, "center_y":0.172179, "width":0.159314, "height":0.274360}, "confidence":0.698494}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.318922, "center_y":0.711584, "width":0.197253, "height":0.315864}, "confidence":0.433810}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.728257, "center_y":0.646859, "width":0.383109, "height":0.157956}, "confidence":0.978624}
+ ] 
+}, 
+{
+ "frame_id":24, 
+ "filename":"./training-files/dataset/eval/001-16.jpg", 
+ "objects": [ 
+  {"class_id":18, "name":"18", "relative_coordinates":{"center_x":0.749496, "center_y":0.634342, "width":0.028266, "height":0.029201}, "confidence":0.323896}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.826414, "center_y":0.207946, "width":0.229003, "height":0.251399}, "confidence":0.362346}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.618702, "center_y":0.699586, "width":0.205807, "height":0.195933}, "confidence":0.330753}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.278565, "center_y":0.187826, "width":0.165479, "height":0.247592}, "confidence":0.305345}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.296438, "center_y":0.592679, "width":0.295106, "height":0.206871}, "confidence":0.992153}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.757831, "center_y":0.425389, "width":0.458662, "height":0.213776}, "confidence":0.433361}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.428561, "center_y":0.655619, "width":0.330302, "height":0.295136}, "confidence":0.997875}
+ ] 
+}, 
+{
+ "frame_id":25, 
+ "filename":"./training-files/dataset/eval/002-13.jpg", 
+ "objects": [ 
+  {"class_id":7, "name":"7", "relative_coordinates":{"center_x":0.480607, "center_y":0.596246, "width":0.053563, "height":0.061434}, "confidence":0.309495}, 
+  {"class_id":6, "name":"6", "relative_coordinates":{"center_x":0.399277, "center_y":0.499743, "width":0.125445, "height":0.237990}, "confidence":0.761231}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.821804, "center_y":0.214845, "width":0.219827, "height":0.284524}, "confidence":0.933691}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.703348, "center_y":0.590045, "width":0.100288, "height":0.472548}, "confidence":0.600533}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.518012, "center_y":0.879197, "width":0.347465, "height":0.102998}, "confidence":0.979196}
+ ] 
+}, 
+{
+ "frame_id":26, 
+ "filename":"./training-files/dataset/eval/003-6.jpg", 
+ "objects": [ 
+  {"class_id":10, "name":"10", "relative_coordinates":{"center_x":0.671963, "center_y":0.518893, "width":0.044762, "height":0.094165}, "confidence":0.373176}, 
+  {"class_id":10, "name":"10", "relative_coordinates":{"center_x":0.747444, "center_y":0.357288, "width":0.047859, "height":0.071358}, "confidence":0.336453}, 
+  {"class_id":10, "name":"10", "relative_coordinates":{"center_x":0.638621, "center_y":0.600714, "width":0.043342, "height":0.076668}, "confidence":0.293027}, 
+  {"class_id":9, "name":"9", "relative_coordinates":{"center_x":0.591867, "center_y":0.632344, "width":0.068743, "height":0.141068}, "confidence":0.683634}, 
+  {"class_id":9, "name":"9", "relative_coordinates":{"center_x":0.710298, "center_y":0.524510, "width":0.062454, "height":0.158965}, "confidence":0.405043}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.802120, "center_y":0.440168, "width":0.239597, "height":0.181718}, "confidence":0.954503}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.741997, "center_y":0.416611, "width":0.276466, "height":0.332195}, "confidence":0.436996}, 
+  {"class_id":0, "name":"0", "relative_coordinates":{"center_x":0.522806, "center_y":0.555440, "width":0.302843, "height":0.191197}, "confidence":0.863420}
+ ] 
+}, 
+{
+ "frame_id":27, 
+ "filename":"./training-files/dataset/eval/004-34.jpg", 
+ "objects": [ 
+  {"class_id":12, "name":"12", "relative_coordinates":{"center_x":0.507457, "center_y":0.753649, "width":0.129017, "height":0.157744}, "confidence":0.883316}, 
+  {"class_id":11, "name":"11", "relative_coordinates":{"center_x":0.626493, "center_y":0.492190, "width":0.235135, "height":0.244200}, "confidence":0.994067}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.184965, "center_y":0.375472, "width":0.224012, "height":0.267221}, "confidence":0.992512}, 
+  {"class_id":2, "name":"2", "relative_coordinates":{"center_x":0.388897, "center_y":0.500684, "width":0.212882, "height":0.380864}, "confidence":0.964567}, 
+  {"class_id":1, "name":"1", "relative_coordinates":{"center_x":0.534540, "center_y":0.245949, "width":0.381616, "height":0.201789}, "confidence":0.786374}
+ ] 
+}, 
+{
+ "frame_id":28, 
+ "filename":"./training-files/dataset/eval/003-26.jpg", 
+ "objects": [ 
+  {"class_id":10, "name":"10", "relative_coordinates":{"center_x":0.485869, "center_y":0.556093, "width":0.056767, "height":0.077752}, "confidence":0.456798}, 
+  {"class_id":10, "name":"10", "relative_coordinates":{"center_x":0.439022, "center_y":0.516785, "width":0.086993, "height":0.089139}, "confidence":0.383612}, 
+  {"class_id":9, "name":"9", "relative_coordinates":{"center_x":0.518620, "center_y":0.478465, "width":0.121713, "height":0.141827}, "confidence":0.626221}, 
+  {"class_id":9, "name":"9", "relative_coordinates":{"center_x":0.399310, "center_y":0.636048, "width":0.082270, "height":0.128612}, "confidence":0.615968}, 
+  {"class_id":3, "name":"3", "relative_coordinates":{"center_x":0.803989, "center_y":0.254746, "width":0.209281, "height":0.296365}, "confidence":0.962260}
+ ] 
+}
+]
