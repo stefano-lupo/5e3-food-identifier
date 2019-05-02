@@ -4,27 +4,32 @@ import cv2
 BBox: [bounding box left X] [bounding box top Y] [bounding box right X] [bounding box bottom Y] [Label]
 DN: [Label] [object center in X] [object center in Y] [object width in X] [object width in Y]
 """
-INGREDIENT_IDS = {
-    "Fork": 0,
-    "Knife": 1,
-    "Spoon": 2,
-    "Glass": 3,
-    "Rice": 4,
-    "Chicken": 5,
-    "Noodle": 6,
-    "Brocolli": 7,
-    "Tomato": 8,
-    "Red Pasta": 9,
-    "Chorizo": 10,
-    "Soup": 11,
-    "Brown Bread": 12,
-    "Yellow Pasta": 13,
-    "Rocket": 14,
-    "Apple": 15,
-    "Grape": 16,
-    "White Pasta": 17,
-    "Sweetcorn": 18
-}
+INGREDIENTS = [
+    "Fork",
+    "Knife",
+    "Spoon",
+    "Glass",
+    "Rice",
+    "Chicken",
+    "Sweetcorn",
+    "Noodle",
+    "Brocolli",
+    "Tomato",
+    "Red Pasta",
+    "Chorizo",
+    "Soup",
+    "Brown Bread",
+    "Yellow Pasta",
+    "Rocket",
+    "Apple",
+    "Grape",
+    "White Pasta"
+]
+
+INGREDIENT_IDS = {}
+for i, ing in enumerate(INGREDIENTS):
+    INGREDIENT_IDS[ing] = i
+
 
 IMG_WIDTH = 1008
 IMG_HEIGHT = 756

@@ -133,7 +133,8 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         resolution = sys.argv[1]
 
-    DISHES_TO_USE = ["002", "003"]
+    # DISHES_TO_USE = ["002", "003"]
+    DISHES_TO_USE = ["001"]
     # DISHES_TO_USE = []
 
     LABELS_DIR = "./labels" + resolution
