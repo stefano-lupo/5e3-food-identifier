@@ -1,0 +1,10 @@
+./training-files504-002-003/dataset/eval/003-27.jpg
+./training-files504-002-003/dataset/eval/002-38.jpg
+./training-files504-002-003/dataset/eval/002-43.jpg
+./training-files504-002-003/dataset/eval/003-11.jpg
+./training-files504-002-003/dataset/eval/002-22.jpg
+./training-files504-002-003/dataset/eval/003-2.jpg
+./training-files504-002-003/dataset/eval/003-8.jpg
+./training-files504-002-003/dataset/eval/002-44.jpg
+./training-files504-002-003/dataset/eval/003-16.jpg
+./training-files504-002-003/dataset/eval/002-13.jpg

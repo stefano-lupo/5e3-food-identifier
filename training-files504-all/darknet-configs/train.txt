@@ -1,7 +1,6 @@
 ./training-files504-all/dataset/train/007-15.jpg
 ./training-files504-all/dataset/train/003-27.jpg
 ./training-files504-all/dataset/train/005-19.jpg
-./training-files504-all/dataset/train/004-30.jpg
 ./training-files504-all/dataset/train/003-56.jpg
 ./training-files504-all/dataset/train/002-38.jpg
 ./training-files504-all/dataset/train/004-37.jpg
@@ -22,7 +21,6 @@
 ./training-files504-all/dataset/train/005-52.jpg
 ./training-files504-all/dataset/train/003-21.jpg
 ./training-files504-all/dataset/train/003-39.jpg
-./training-files504-all/dataset/train/004-9.jpg
 ./training-files504-all/dataset/train/005-54.jpg
 ./training-files504-all/dataset/train/001-36.jpg
 ./training-files504-all/dataset/train/005-14.jpg
@@ -38,7 +36,6 @@
 ./training-files504-all/dataset/train/004-10.jpg
 ./training-files504-all/dataset/train/001-0.jpg
 ./training-files504-all/dataset/train/001-33.jpg
-./training-files504-all/dataset/train/005-13.jpg
 ./training-files504-all/dataset/train/001-8.jpg
 ./training-files504-all/dataset/train/003-32.jpg
 ./training-files504-all/dataset/train/004-8.jpg
@@ -56,6 +53,7 @@
 ./training-files504-all/dataset/train/004-39.jpg
 ./training-files504-all/dataset/train/006-26.jpg
 ./training-files504-all/dataset/train/002-37.jpg
+./training-files504-all/dataset/train/004-25.jpg
 ./training-files504-all/dataset/train/002-11.jpg
 ./training-files504-all/dataset/train/004-26.jpg
 ./training-files504-all/dataset/train/003-42.jpg
@@ -70,11 +68,9 @@
 ./training-files504-all/dataset/train/005-63.jpg
 ./training-files504-all/dataset/train/003-48.jpg
 ./training-files504-all/dataset/train/003-17.jpg
-./training-files504-all/dataset/train/005-12.jpg
 ./training-files504-all/dataset/train/001-7.jpg
 ./training-files504-all/dataset/train/006-2.jpg
 ./training-files504-all/dataset/train/004-2.jpg
-./training-files504-all/dataset/train/005-36.jpg
 ./training-files504-all/dataset/train/007-19.jpg
 ./training-files504-all/dataset/train/007-17.jpg
 ./training-files504-all/dataset/train/003-10.jpg
@@ -104,7 +100,6 @@
 ./training-files504-all/dataset/train/005-34.jpg
 ./training-files504-all/dataset/train/002-25.jpg
 ./training-files504-all/dataset/train/003-18.jpg
-./training-files504-all/dataset/train/004-31.jpg
 ./training-files504-all/dataset/train/003-19.jpg
 ./training-files504-all/dataset/train/005-67.jpg
 ./training-files504-all/dataset/train/005-31.jpg
@@ -118,14 +113,12 @@
 ./training-files504-all/dataset/train/002-22.jpg
 ./training-files504-all/dataset/train/002-34.jpg
 ./training-files504-all/dataset/train/006-38.jpg
-./training-files504-all/dataset/train/004-12.jpg
 ./training-files504-all/dataset/train/002-33.jpg
 ./training-files504-all/dataset/train/006-36.jpg
 ./training-files504-all/dataset/train/004-35.jpg
 ./training-files504-all/dataset/train/002-35.jpg
 ./training-files504-all/dataset/train/005-3.jpg
 ./training-files504-all/dataset/train/006-27.jpg
-./training-files504-all/dataset/train/003-51.jpg
 ./training-files504-all/dataset/train/002-30.jpg
 ./training-files504-all/dataset/train/003-35.jpg
 ./training-files504-all/dataset/train/001-28.jpg
@@ -141,7 +134,6 @@
 ./training-files504-all/dataset/train/006-30.jpg
 ./training-files504-all/dataset/train/004-29.jpg
 ./training-files504-all/dataset/train/007-18.jpg
-./training-files504-all/dataset/train/003-58.jpg
 ./training-files504-all/dataset/train/001-15.jpg
 ./training-files504-all/dataset/train/003-31.jpg
 ./training-files504-all/dataset/train/002-0.jpg
@@ -153,7 +145,6 @@
 ./training-files504-all/dataset/train/001-17.jpg
 ./training-files504-all/dataset/train/007-5.jpg
 ./training-files504-all/dataset/train/002-6.jpg
-./training-files504-all/dataset/train/004-28.jpg
 ./training-files504-all/dataset/train/005-7.jpg
 ./training-files504-all/dataset/train/005-26.jpg
 ./training-files504-all/dataset/train/002-2.jpg
@@ -164,7 +155,6 @@
 ./training-files504-all/dataset/train/001-21.jpg
 ./training-files504-all/dataset/train/001-6.jpg
 ./training-files504-all/dataset/train/005-50.jpg
-./training-files504-all/dataset/train/004-32.jpg
 ./training-files504-all/dataset/train/001-27.jpg
 ./training-files504-all/dataset/train/001-23.jpg
 ./training-files504-all/dataset/train/005-64.jpg
@@ -173,12 +163,12 @@
 ./training-files504-all/dataset/train/005-25.jpg
 ./training-files504-all/dataset/train/001-24.jpg
 ./training-files504-all/dataset/train/003-52.jpg
-./training-files504-all/dataset/train/004-11.jpg
 ./training-files504-all/dataset/train/003-4.jpg
 ./training-files504-all/dataset/train/003-49.jpg
 ./training-files504-all/dataset/train/005-68.jpg
 ./training-files504-all/dataset/train/003-2.jpg
 ./training-files504-all/dataset/train/001-13.jpg
+./training-files504-all/dataset/train/005-27.jpg
 ./training-files504-all/dataset/train/005-65.jpg
 ./training-files504-all/dataset/train/003-29.jpg
 ./training-files504-all/dataset/train/005-23.jpg
@@ -198,7 +188,6 @@
 ./training-files504-all/dataset/train/002-15.jpg
 ./training-files504-all/dataset/train/006-0.jpg
 ./training-files504-all/dataset/train/005-30.jpg
-./training-files504-all/dataset/train/004-33.jpg
 ./training-files504-all/dataset/train/002-42.jpg
 ./training-files504-all/dataset/train/006-5.jpg
 ./training-files504-all/dataset/train/006-19.jpg
@@ -206,7 +195,6 @@
 ./training-files504-all/dataset/train/005-38.jpg
 ./training-files504-all/dataset/train/006-3.jpg
 ./training-files504-all/dataset/train/001-14.jpg
-./training-files504-all/dataset/train/004-1.jpg
 ./training-files504-all/dataset/train/003-45.jpg
 ./training-files504-all/dataset/train/007-0.jpg
 ./training-files504-all/dataset/train/005-58.jpg
@@ -221,7 +209,6 @@
 ./training-files504-all/dataset/train/001-20.jpg
 ./training-files504-all/dataset/train/002-8.jpg
 ./training-files504-all/dataset/train/005-57.jpg
-./training-files504-all/dataset/train/003-54.jpg
 ./training-files504-all/dataset/train/003-16.jpg
 ./training-files504-all/dataset/train/004-21.jpg
 ./training-files504-all/dataset/train/003-20.jpg
@@ -230,6 +217,7 @@
 ./training-files504-all/dataset/train/005-41.jpg
 ./training-files504-all/dataset/train/001-4.jpg
 ./training-files504-all/dataset/train/005-29.jpg
+./training-files504-all/dataset/train/003-36.jpg
 ./training-files504-all/dataset/train/003-7.jpg
 ./training-files504-all/dataset/train/004-0.jpg
 ./training-files504-all/dataset/train/006-23.jpg
@@ -259,6 +247,7 @@
 ./training-files504-all/dataset/train/006-31.jpg
 ./training-files504-all/dataset/train/002-32.jpg
 ./training-files504-all/dataset/train/006-11.jpg
+./training-files504-all/dataset/train/003-6.jpg
 ./training-files504-all/dataset/train/005-51.jpg
 ./training-files504-all/dataset/train/002-16.jpg
 ./training-files504-all/dataset/train/006-29.jpg
@@ -266,11 +255,9 @@
 ./training-files504-all/dataset/train/006-17.jpg
 ./training-files504-all/dataset/train/002-20.jpg
 ./training-files504-all/dataset/train/007-21.jpg
-./training-files504-all/dataset/train/004-22.jpg
 ./training-files504-all/dataset/train/006-21.jpg
 ./training-files504-all/dataset/train/004-7.jpg
 ./training-files504-all/dataset/train/001-35.jpg
-./training-files504-all/dataset/train/004-5.jpg
 ./training-files504-all/dataset/train/005-33.jpg
 ./training-files504-all/dataset/train/005-62.jpg
 ./training-files504-all/dataset/train/002-23.jpg
@@ -280,6 +267,7 @@
 ./training-files504-all/dataset/train/004-16.jpg
 ./training-files504-all/dataset/train/001-18.jpg
 ./training-files504-all/dataset/train/005-47.jpg
+./training-files504-all/dataset/train/004-34.jpg
 ./training-files504-all/dataset/train/001-12.jpg
 ./training-files504-all/dataset/train/005-59.jpg
 ./training-files504-all/dataset/train/005-56.jpg

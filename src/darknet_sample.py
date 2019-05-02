@@ -19,7 +19,7 @@ class DarknetSample:
         return "\n".join([obj.dnLine for obj in self.objects])
     
     def getImagePath(self) -> str:
-        return os.path.join(self.imageDir, self.sampleName.getImageFilename())
+        return os.path.join(self.imageDir, self.sampleName.getFilename("jpg"))
 
     def writeSample(self, directory: str):
         labelFile: str = os.path.join(directory, self.sampleName.getDatasetFilename("txt"))

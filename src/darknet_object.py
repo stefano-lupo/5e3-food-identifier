@@ -1,3 +1,4 @@
+import cv2
 
 """
 BBox: [bounding box left X] [bounding box top Y] [bounding box right X] [bounding box bottom Y] [Label]
@@ -34,7 +35,10 @@ class DarknetObject:
         bBoxPieces = bBoxLine.split(" ")
         self.label = INGREDIENT_IDS[" ".join(bBoxPieces[4:])]
         x1, y1, x2, y2 = [int(i) for i in bBoxPieces[:4]]
-        
+
+        self.topLeft = (x1, y1)
+        self.bottomRight = (x2, y2)
+
         width = x2 - x1
         height = y2 - y1
         x = round(x1 + width / 2)
@@ -48,3 +52,6 @@ class DarknetObject:
     
         dnPieces = [str(i) for i in [self.label, x, y, width, height]]
         self.dnLine = " ".join(dnPieces)
+
+    def drawBoundingBox(self, img):
+        cv2.rectangle(img, self.topLeft, self.bottomRight, (0, 255, 0), 3)

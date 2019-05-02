@@ -7,6 +7,7 @@ import shutil
 import glob
 
 import numpy as np
+import cv2
 
 from darknet_sample import DarknetSample
 from sample_name import SampleName
@@ -82,6 +83,48 @@ def generateYoloConfig(darknetSamples: List[DarknetSample]):
         with open(DARKNET_DATA_FILE, 'w') as f2:
             f2.write(dataFileContents)
 
+    numClasses: int = len(classes)
+    maxBatches: int = numClasses * 2000
+    templateVals = {
+        "classes": numClasses,
+        "filters": (numClasses + 5) * 3,
+        "maxBatches": str(maxBatches),
+        "steps": str(round(maxBatches * 0.8)) + "," + str(round(maxBatches * 0.9))
+    }
+
+    with open(YOLO_CONFIG_FILE_TEMPLATE) as f:
+        lines: str = "".join(f.readlines()).format(**templateVals)
+        with open(YOLO_5E3_FILE, 'w') as w:
+            w.write(lines)
+
+    with open(YOLO_TINY_CONFIG_FILE_TEMPLATE) as f:
+        lines: str = "".join(f.readlines()).format(**templateVals)
+        with open(YOLO_5E3_TINY_FILE, 'w') as w:
+            w.write(lines)
+
+
+def checkBoundingBoxes(trainSamples: Set[DarknetSample], evalSamples: Set[DarknetSample]):
+    # trainSample: DarknetSample = next(iter(trainSamples))
+    # evalSamples: DarknetSample = next(iter(evalSamples))
+
+    print("Checking train samples")
+    for trainSample in trainSamples:
+        drawBoundingBoxes(trainSample)
+
+    print("Checking eval samples")
+    for evalSample in evalSamples:
+        drawBoundingBoxes(evalSample)
+
+
+def drawBoundingBoxes(sample: DarknetSample):
+    img = cv2.imread(sample.getImagePath(), cv2.IMREAD_COLOR)
+    # img = cv2.flip(img, -1)
+    for dnObj in sample.objects:
+        dnObj.drawBoundingBox(img)
+
+    cv2.imshow('image', img)
+    cv2.waitKey(0)
+
 
 if __name__ == "__main__":
     
@@ -90,7 +133,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         resolution = sys.argv[1]
 
-    DISHES_TO_USE = ["001", "002"]
+    DISHES_TO_USE = ["002", "003"]
     # DISHES_TO_USE = []
 
     LABELS_DIR = "./labels" + resolution
@@ -103,16 +146,24 @@ if __name__ == "__main__":
 
     DARKNET_TEMPLATES_DIR = "./templates"
     DARKNET_DATA_FILE_TEMPLATE = os.path.join(DARKNET_TEMPLATES_DIR, "obj.data")
+    YOLO_CONFIG_FILE_TEMPLATE = os.path.join(DARKNET_TEMPLATES_DIR, "yolo-template.cfg")
+    YOLO_TINY_CONFIG_FILE_TEMPLATE = os.path.join(DARKNET_TEMPLATES_DIR, "yolo-tiny-template.cfg")
 
     dishes = "all" if len(DISHES_TO_USE) == 0 else "-".join(DISHES_TO_USE)
     TRAINING_FILES_DIR = "./training-files" + resolution + "-" + dishes
+
     DARKNET_CONFIG_DIR = os.path.join(TRAINING_FILES_DIR, "darknet-configs")
     os.makedirs(DARKNET_CONFIG_DIR, exist_ok=True)
+
+    YOLO_5E3_FILE = os.path.join(DARKNET_CONFIG_DIR, "5e3.cfg")
+    YOLO_5E3_TINY_FILE = os.path.join(DARKNET_CONFIG_DIR, "5e3-tiny.cfg")
+
     DARKNET_BACKUP_DIR = os.path.join(DARKNET_CONFIG_DIR, "backup")
     os.makedirs(DARKNET_BACKUP_DIR, exist_ok=True)
 
     DATASET_DIR = os.path.join(TRAINING_FILES_DIR, "dataset")
     os.makedirs(DATASET_DIR, exist_ok=True)
+
     TRAIN_DIR = os.path.join(DATASET_DIR, "train")
     EVAL_DIR = os.path.join(DATASET_DIR, "eval")
 
@@ -136,13 +187,15 @@ if __name__ == "__main__":
     os.mkdir(TRAIN_DIR)
     os.mkdir(EVAL_DIR)
 
-    
+
     for sample in trainSamples:
         sample.writeSample(TRAIN_DIR)
 
     for sample in evalSamples:
         sample.writeSample(EVAL_DIR)
-    
+
     writeDatasetTxtFiles()
     generateYoloConfig(darknetSamples)
+
+    # checkBoundingBoxes(trainSamples, evalSamples)
     

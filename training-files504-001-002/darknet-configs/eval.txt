@@ -1,8 +1,0 @@
-./training-files504-001-002/dataset/eval/001-34.jpg
-./training-files504-001-002/dataset/eval/002-21.jpg
-./training-files504-001-002/dataset/eval/001-22.jpg
-./training-files504-001-002/dataset/eval/001-29.jpg
-./training-files504-001-002/dataset/eval/002-24.jpg
-./training-files504-001-002/dataset/eval/001-16.jpg
-./training-files504-001-002/dataset/eval/002-13.jpg
-./training-files504-001-002/dataset/eval/002-23.jpg
