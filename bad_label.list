@@ -1,0 +1,6 @@
+./training-files504-001-002/dataset/train/001-35.txt Wrong annotation: class_id = 18. But class_id should be [from 0 to 9]
+./training-files504-001-002/dataset/train/001-17.txt Wrong annotation: class_id = 18. But class_id should be [from 0 to 9]
+./training-files504-001-002/dataset/train/001-25.txt Wrong annotation: class_id = 18. But class_id should be [from 0 to 9]
+./training-files504-002-003/dataset/train/003-52.txt Wrong annotation: class_id = 9. But class_id should be [from 0 to 8]
+./training-files504-002-003/dataset/train/003-46.txt Wrong annotation: class_id = 9. But class_id should be [from 0 to 8]
+./training-files504-002-003/dataset/train/003-50.txt Wrong annotation: class_id = 10. But class_id should be [from 0 to 8]
