@@ -1,0 +1,11 @@
+10
+72 246 168 331 Glass
+210 92 405 129 Fork
+297 179 434 246 Knife
+235 202 303 248 Chicken
+216 175 252 196 White Pasta
+224 131 276 156 White Pasta
+294 134 332 156 White Pasta
+258 180 276 202 White Pasta
+332 152 352 168 Sweetcorn
+312 160 325 176 Sweetcorn

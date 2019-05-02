@@ -1,0 +1,6 @@
+5
+269 192 381 309 Spoon
+128 188 260 312 Knife
+64 78 162 156 Glass
+219 177 277 236 Brown Bread
+303 80 390 163 Brown Bread

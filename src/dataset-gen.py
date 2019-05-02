@@ -16,29 +16,6 @@ random.seed(10)
 np.random.seed(10)
 
 
-LABELS_DIR = "./labels"
-IMAGES_DIR = "./images"
-DARKNET_TEMPLATES_DIR = "./templates"
-DARKNET_DATA_FILE_TEMPLATE = os.path.join(DARKNET_TEMPLATES_DIR, "obj.data")
-
-TRAINING_FILES_DIR = "./training-files"
-DARKNET_CONFIG_DIR = os.path.join(TRAINING_FILES_DIR, "darknet-configs")
-DARKNET_BACKUP_DIR = os.path.join(DARKNET_CONFIG_DIR, "backup")
-
-DATASET_DIR = os.path.join(TRAINING_FILES_DIR, "dataset")
-TRAIN_DIR = os.path.join(DATASET_DIR, "train")
-EVAL_DIR = os.path.join(DATASET_DIR, "eval")
-
-TRAIN_FILE = os.path.join(DARKNET_CONFIG_DIR, "train.txt")
-EVAL_FILE = os.path.join(DARKNET_CONFIG_DIR, "eval.txt")
-
-DARKNET_NAMES_FILE = os.path.join(DARKNET_CONFIG_DIR, "obj.names")
-DARKNET_DATA_FILE = os.path.join(DARKNET_CONFIG_DIR, "obj.data")
-
-
-
-# Basic eval split for now, cross val later
-EVALUATION_SPLIT = 0.1
 
 def generateSamples(menuItemDirs: List[str], normalize=False) -> List[DarknetSample]:
     darknetSamples: List[DarknetSample] = []
@@ -50,9 +27,11 @@ def generateSamples(menuItemDirs: List[str], normalize=False) -> List[DarknetSam
             darknetSamples.append(DarknetSample(IMAGES_DIR, LABELS_DIR, sampleName, normalize))
     return darknetSamples
 
+
 def moveAll(files: List[str], destDir: str):
     for fileName in files:
         shutil.move(fileName, destDir)
+
 
 def splitDataset(samples: List[DarknetSample]) -> (List[DarknetSample], List[DarknetSample]):
     # np.random.shuffle(samples)
@@ -84,6 +63,7 @@ def writeDatasetTxtFiles():
         evalFiles: List[str] = [evalFile for evalFile in glob.glob("%s/*.jpg" % EVAL_DIR)]
         f.write("\n".join(evalFiles))
 
+
 def generateYoloConfig(darknetSamples: List[DarknetSample]):
     classes: Set[int] = set()
     for sample in darknetSamples:
@@ -106,11 +86,46 @@ def generateYoloConfig(darknetSamples: List[DarknetSample]):
 if __name__ == "__main__":
     
     normalize = True
+    resolution = "504"
     if len(sys.argv) > 1:
-        normalize = sys.argv[1]
+        resolution = sys.argv[1]
+
+    DISHES_TO_USE = ["001", "002"]
+    # DISHES_TO_USE = []
+
+    LABELS_DIR = "./labels" + resolution
+    IMAGES_DIR = "./images" + resolution
 
     menuItemDirs: List[str] = os.listdir(LABELS_DIR)
+    if len(DISHES_TO_USE) > 0:
+        menuItemDirs = [mid for mid in menuItemDirs if mid in DISHES_TO_USE]
     print("Using menu items: %s" % menuItemDirs)
+
+    DARKNET_TEMPLATES_DIR = "./templates"
+    DARKNET_DATA_FILE_TEMPLATE = os.path.join(DARKNET_TEMPLATES_DIR, "obj.data")
+
+    dishes = "all" if len(DISHES_TO_USE) == 0 else "-".join(DISHES_TO_USE)
+    TRAINING_FILES_DIR = "./training-files" + resolution + "-" + dishes
+    DARKNET_CONFIG_DIR = os.path.join(TRAINING_FILES_DIR, "darknet-configs")
+    os.makedirs(DARKNET_CONFIG_DIR, exist_ok=True)
+    DARKNET_BACKUP_DIR = os.path.join(DARKNET_CONFIG_DIR, "backup")
+    os.makedirs(DARKNET_BACKUP_DIR, exist_ok=True)
+
+    DATASET_DIR = os.path.join(TRAINING_FILES_DIR, "dataset")
+    os.makedirs(DATASET_DIR, exist_ok=True)
+    TRAIN_DIR = os.path.join(DATASET_DIR, "train")
+    EVAL_DIR = os.path.join(DATASET_DIR, "eval")
+
+    TRAIN_FILE = os.path.join(DARKNET_CONFIG_DIR, "train.txt")
+    EVAL_FILE = os.path.join(DARKNET_CONFIG_DIR, "eval.txt")
+
+    DARKNET_NAMES_FILE = os.path.join(DARKNET_CONFIG_DIR, "obj.names")
+    DARKNET_DATA_FILE = os.path.join(DARKNET_CONFIG_DIR, "obj.data")
+
+    # Basic eval split for now, cross val later
+    EVALUATION_SPLIT = 0.1
+
+
 
     darknetSamples: List[DarknetSample] = generateSamples(menuItemDirs, normalize)
     trainSamples, evalSamples = splitDataset(darknetSamples)
