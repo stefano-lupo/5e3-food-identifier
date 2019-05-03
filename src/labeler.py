@@ -6,7 +6,7 @@ from darknet_object import INGREDIENT_IDS
 INGREDIENT_NAMES = {v: k for k, v in INGREDIENT_IDS.items()}
 
 EXTRA_SCALE = 2
-CONFIDENCE = 0.4
+CONFIDENCE_THRESHOLD = 0.4
 
 DEFAULT_PLOTLY_COLORS = [
     (31, 119, 180),
@@ -22,10 +22,10 @@ DEFAULT_PLOTLY_COLORS = [
 ]
 
 class Result:
-    def __init__(self, result):
+    def __init__(self, result, threshold: float):
         self.filename: str = result['filename']
         self.objects: List[Object] = [Object(o) for o in result['objects']]
-        self.objects =[obj for obj in self.objects if obj.confidence >= CONFIDENCE]
+        self.objects =[obj for obj in self.objects if obj.confidence >= threshold]
 
 class Object:
     def __init__(self, obj):
@@ -62,10 +62,10 @@ class Object:
 RESULTS_FILE = "./results/504-001-tiny.json"
 
 
-def loadResults(resultsFile: str) -> List[Result]:
+def loadResults(resultsFile: str, threshold: float) -> List[Result]:
     with open(resultsFile, 'r') as f:
         resultsJson = json.load(f)
-        results: List[Result] = [Result(r) for r in resultsJson]
+        results: List[Result] = [Result(r, threshold) for r in resultsJson]
         print(results)
 
     return results
@@ -85,10 +85,17 @@ def drawBoundingBoxes(result: Result):
 
 if __name__ == "__main__":
     resultsFile = RESULTS_FILE
+    threshold = CONFIDENCE_THRESHOLD
 
     if len(sys.argv) > 1:
         resultsFile = sys.argv[1]
 
-    results: List[Result] = loadResults(resultsFile)
+    if len(sys.argv) > 2:
+        threshold = float(sys.argv[2])
+
+    print("Using results file %s" % resultsFile)
+    print("Using threshold file %s" % threshold)
+
+    results: List[Result] = loadResults(resultsFile, threshold)
     for result in results:
         drawBoundingBoxes(result)
