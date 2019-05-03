@@ -94,7 +94,7 @@ if __name__ == "__main__":
         threshold = float(sys.argv[2])
 
     print("Using results file %s" % resultsFile)
-    print("Using threshold file %s" % threshold)
+    print("Using threshold of %s" % threshold)
 
     results: List[Result] = loadResults(resultsFile, threshold)
     for result in results:
