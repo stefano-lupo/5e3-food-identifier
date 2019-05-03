@@ -1,8 +1,12 @@
-import json, os, cv2
+import sys, json, os, cv2
 
 from typing import List, Dict, Set
+from darknet_object import INGREDIENT_IDS
+
+INGREDIENT_NAMES = {v: k for k, v in INGREDIENT_IDS.items()}
 
 EXTRA_SCALE = 2
+CONFIDENCE = 0.4
 
 DEFAULT_PLOTLY_COLORS = [
     (31, 119, 180),
@@ -21,6 +25,7 @@ class Result:
     def __init__(self, result):
         self.filename: str = result['filename']
         self.objects: List[Object] = [Object(o) for o in result['objects']]
+        self.objects =[obj for obj in self.objects if obj.confidence >= CONFIDENCE]
 
 class Object:
     def __init__(self, obj):
@@ -50,14 +55,15 @@ class Object:
     def draw(self, img):
         height, width, _ = img.shape
         x1, y1, x2, y2 = self.centerToCorners(scale=(width, height))
-        cv2.rectangle(img, (x1, y1), (x2, y2), DEFAULT_PLOTLY_COLORS[self.classId], 1)
+        colour = DEFAULT_PLOTLY_COLORS[self.classId] if self.classId < len(DEFAULT_PLOTLY_COLORS) else (255, 0, 0)
+        cv2.rectangle(img, (x1, y1), (x2, y2), colour, 2)
 
 
-RESULTS_FILE = "result.json"
+RESULTS_FILE = "./results/504-001-tiny.json"
 
 
-def loadResults() -> List[Result]:
-    with open(RESULTS_FILE, 'r') as f:
+def loadResults(resultsFile: str) -> List[Result]:
+    with open(resultsFile, 'r') as f:
         resultsJson = json.load(f)
         results: List[Result] = [Result(r) for r in resultsJson]
         print(results)
@@ -67,15 +73,22 @@ def loadResults() -> List[Result]:
 def drawBoundingBoxes(result: Result):
     img = cv2.imread(result.filename, cv2.IMREAD_COLOR)
 
+    print("\nFile: %s" % result.filename)
     # img = cv2.flip(img, -1)
     for obj in result.objects:
         obj.draw(img)
+        print("%s: %0.2f" % (INGREDIENT_NAMES[obj.classId], obj.confidence))
 
     cv2.imshow('image', img)
     cv2.waitKey(0)
 
 
 if __name__ == "__main__":
-    results: List[Result] = loadResults()
+    resultsFile = RESULTS_FILE
+
+    if len(sys.argv) > 1:
+        resultsFile = sys.argv[1]
+
+    results: List[Result] = loadResults(resultsFile)
     for result in results:
         drawBoundingBoxes(result)
